@@ -1,0 +1,21 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+sacha:spin
+iron:layout
+mdg:geolocation
+jquery
+mizzao:bootboxjs
+fezvrasta:bootstrap-material-design
+accounts-facebook
+meteorhacks:flow-router
+meteorhacks:flow-layout
+accounts-password
+momentjs:moment
+juliancwirko:s-alert-flip
+underscore
+meteorhacks:fast-render

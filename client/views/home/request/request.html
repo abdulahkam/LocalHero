@@ -1,0 +1,60 @@
+<template name="request">
+<div class="container">
+<div class="text-with-box">
+	
+
+	{{>FormRequest}}
+	</div>
+	<!-- {{>ContentNavigation}} -->
+	<br>
+	<span class="text-middle-line">REQUESTS FOR HERO!</span>
+	<br>
+	<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="media-list request-list">
+					{{#each listRequests}}
+					<!-- {{#if }} -->
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object img-media" src="../{{photo createdBy}}" alt="...">
+							</a>
+						</div>
+						<div class="media-body">
+							<div class="media-heading">
+								<b><a href="/otherprofile/request/{{createdBy}}">{{nameRequester createdBy}}</a></b> 
+								<br>
+								<span class="gift">+{{exp}} exp , € {{bounty}} . <span class="time">{{date createdAt}}</span></span>
+							</div>
+							<p>
+								{{info}} <br>
+							</p>
+							
+							<hr>
+							{{#if Iam createdBy}}
+
+							<span class="pull-left {{helpBulb}}" id="help">
+								<i class="glyphicon glyphicon-link"></i> Help 
+							</span>
+
+							<span class="pull-right skipBulb" id="skip">
+								<i class="glyphicon glyphicon-trash"></i> Skip
+							</span>
+
+							{{else}}
+								<span class="gift">
+									{{wantToHelp reply.apply}} heroes want to help
+								</span>
+							{{/if}}
+
+							  
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+</div>
+
+</template>

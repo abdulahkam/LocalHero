@@ -1,0 +1,40 @@
+<template name="WaitingGive">
+
+	<div class="container">
+
+		{{>WaitingContentNavigation}}
+		<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="media-list request-list">
+					{{#each listGives}}
+					<!-- {{#if }} -->
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object img-media" src="../{{photo createdBy}}" alt="...">
+							</a>
+						</div>
+						<div class="media-body">
+							<div class="media-heading">
+								<b><a href="/otherprofile/request/{{_id}}">{{nameRequester createdBy}}</a></b> 
+								<br>
+								<span class="gift">+{{exp}} exp , € {{bounty}} . <span class="time">{{date createdAt}}</span></span>
+							</div>
+							<p>
+								{{info}} <br>
+							</p>
+							
+							<hr>
+							<span class="label {{status reply}}">
+								 {{status reply}}
+							</span>
+							  
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

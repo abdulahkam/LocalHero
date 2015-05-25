@@ -1,0 +1,16 @@
+NOTES
+Mau nanya bros,
+
+Jadi kan ceritanya mau make fungsi Tracker meteor. ini ada kasusnya.
+
+Misalkan orangnya A dan B.
+Collectionnya misalkan Posting.
+
+
+Nah, misalkan B insert sesuatu ke Posting, otomatis kan Posting.find({}).count() berubah. saya pengen, A dikasih alert kalau datanya nambah.
+
+Solusi yang udah kucoba :
+- Pake tracker session ga mungkin, karena logikanya, session A dan B pastinya beda (casenya A dan B tidak berada dalam browser yang sama)
+- Sebenarnya, A bisa dapat notifikasi, cuma saya harus pakai helper, dan ga mungkin kutaur
+
+baru satu itu sih yang kucoba. ada yang bisa

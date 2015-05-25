@@ -1,0 +1,29 @@
+<template name="ProfileRequest">
+
+
+	<div class="container">
+		{{>MiniProfile}}
+		{{>ProfileContentNavigation}}
+		<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="media-list request-list">
+					{{#each listRequests}}
+					<!-- {{#if }} -->
+					<div class="media">
+						<div class="media-body">
+							<div class="media-heading">
+								<span class="gift">+{{exp}} exp , € {{bounty}} . <span class="time">{{date createdAt}}</span></span>
+							</div>
+							<p>
+								{{info}} <br>
+							</p>
+							
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

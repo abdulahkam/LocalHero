@@ -1,0 +1,30 @@
+<template name="leaderboard">
+<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="media-list request-list">
+				<h3>Leaderboards of Heroes!</h3>
+					{{#each listHeroes}}
+					<!-- {{#if }} -->
+					<div class="media">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object img-media" src="../{{profile.photo}}" alt="...">
+							</a>
+						</div>
+						<div class="media-body">
+							<div class="media-heading">
+								<b><a href="/otherprofile/request/{{_id}}">{{profile.name}}</a></b> 
+								<br>
+								<span class="gift">Level {{level}} / {{request}} Request/ {{give}} Give</span>
+							</div>
+
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+</div>
+
+</template>

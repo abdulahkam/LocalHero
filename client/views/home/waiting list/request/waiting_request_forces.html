@@ -1,0 +1,28 @@
+<template name="WaitingRequestForces">
+	{{#each listForces requestId}}
+	<div class="media">
+		<div class="media-left">
+			<a href="/otherprofile/request/{{_id}}">
+				<img class="media-object img-media" src="../{{profile.photo}}" alt="...">
+			</a>
+		</div>
+		<div class="media-body">
+			<div class="media-heading">
+				<b><a href="/otherprofile/request/{{_id}}">{{profile.name}}</a> </b> <br>
+				<span class="gift">Level {{level profile.exp}}</span>
+			</div>
+			{{#if shouldAcceptOrRefuse ../requestReply}}
+			<div class="confirmation">
+				<span class="label label-primary accept"><i class="glyphicon glyphicon-check"></i> Accept</span>
+				<span class="label label-danger refuse"><i class="glyphicon glyphicon-trash"></i> Refuse</span>
+			</div>
+			{{else}}
+			<div class="finished">
+				<span class="label label-primary clear"><i class="glyphicon glyphicon-check"></i> Cleared</span>
+				<span class="label label-danger failed"><i class="glyphicon glyphicon-trash"></i> Failed</span>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+	{{/each}}
+</template>

@@ -1,0 +1,35 @@
+<template name="WaitingRequest">
+
+
+	<div class="container">
+
+		{{>WaitingContentNavigation}}
+		<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="media-list request-list">
+					{{#each listRequests}}
+					<!-- {{#if }} -->
+					<div class="media">
+						<div class="media-body">
+							<div class="media-heading">
+								<span class="gift">+{{exp}} exp , € {{bounty}} . <span class="time">{{date createdAt}}</span></span>
+							</div>
+							<p>
+								{{info}} <br>
+							</p>
+							<hr>
+							<b>Heroes who want to help you : </b><br>
+							
+							<div class="forces">
+								{{>WaitingRequestForces requestId=_id requestReply=reply requestExp=exp}}
+							</div>
+							  
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
